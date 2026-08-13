@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://rfvsxuanl7l5"]
+
+[ext_resource type="PackedScene" uid="uid://dfxb34nm448re" path="res://scenes/navigation_button.tscn" id="1_errlg"]
+[ext_resource type="PackedScene" uid="uid://h3wp1eh5ia8e" path="res://scenes/next.tscn" id="2_bl13t"]
+
+[node name="Test" type="Node2D" unique_id=169537640]
+
+[node name="NavigationButton" parent="." unique_id=425971289 instance=ExtResource("1_errlg")]
+position = Vector2(10, 638)
+next_scene = ExtResource("2_bl13t")
