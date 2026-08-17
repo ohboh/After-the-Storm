@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://du2l1c1yo4b2p"]
+
+[ext_resource type="Script" uid="uid://onpyxg8glm5g" path="res://nav_button.gd" id="1_mspxd"]
+
+[node name="NavButton" type="TextureButton" unique_id=934337939]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mspxd")

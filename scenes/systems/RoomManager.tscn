@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bqdcsr770yrxy"]
+
+[ext_resource type="Script" uid="uid://62xf6cigrl7r" path="res://autoload/RoomManager.gd" id="1_ulrx3"]
+[ext_resource type="PackedScene" uid="uid://c3n0mh7m6k6pc" path="res://scenes/rooms/living_room.tscn" id="2_ucseh"]
+[ext_resource type="PackedScene" uid="uid://crc7r8ljb2ed0" path="res://scenes/rooms/dining_room.tscn" id="3_osuhb"]
+[ext_resource type="PackedScene" uid="uid://bdv01fec7vywm" path="res://scenes/rooms/kitchen.tscn" id="4_4ayqf"]
+[ext_resource type="PackedScene" uid="uid://ngub5we1jjn8" path="res://scenes/rooms/hallway_1f.tscn" id="5_exe71"]
+[ext_resource type="PackedScene" uid="uid://bb6vd7w6r6ojx" path="res://scenes/rooms/stair_landing.tscn" id="6_pqqss"]
+[ext_resource type="PackedScene" uid="uid://drvvum6w0r04y" path="res://scenes/rooms/hallway_2f.tscn" id="7_2rvvs"]
+[ext_resource type="PackedScene" uid="uid://be6v7c3320qcw" path="res://scenes/rooms/storage.tscn" id="8_gi0ug"]
+[ext_resource type="PackedScene" uid="uid://iwd7y6kmjcr6" path="res://scenes/rooms/bathroom.tscn" id="9_ygttc"]
+[ext_resource type="PackedScene" uid="uid://v0juaofw4lhy" path="res://scenes/rooms/bedroom.tscn" id="10_142ow"]
+
+[node name="RoomManager" type="Node" unique_id=1375638157]
+script = ExtResource("1_ulrx3")
+room_registry = Dictionary[String, PackedScene]({
+"Bathroom": ExtResource("9_ygttc"),
+"Bedroom": ExtResource("10_142ow"),
+"Dining Room": ExtResource("3_osuhb"),
+"Hallway 1F": ExtResource("5_exe71"),
+"Hallway 2F": ExtResource("7_2rvvs"),
+"Kitchen": ExtResource("4_4ayqf"),
+"Living Room": ExtResource("2_ucseh"),
+"Stair Landing": ExtResource("6_pqqss"),
+"Storage": ExtResource("8_gi0ug")
+})
