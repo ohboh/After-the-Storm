@@ -17,19 +17,14 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-DialogueManager="*uid://c3rodes2l3gxb"
 AudioManager="*uid://dtrfsjsjx1yu0"
-RoomManager="*uid://62xf6cigrl7r"
+RoomManager="*uid://bqdcsr770yrxy"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [internationalization]
 
