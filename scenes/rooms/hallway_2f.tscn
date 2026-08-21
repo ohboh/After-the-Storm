@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://drvvum6w0r04y"]
 
-[node name="Hallway2f" type="Node2D" unique_id=565269896]
+[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_k6bnf"]
+
+[node name="Hallway 2F" unique_id=1809451776 instance=ExtResource("1_k6bnf")]
+
+[node name="NavButtonLeft" parent="." index="1" unique_id=934337939]
+target_room = "bedroom"
+
+[node name="NavButtonRight" parent="." index="2" unique_id=1425211887]
+target_room = "stairs_landing"

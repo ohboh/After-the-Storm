@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://iwd7y6kmjcr6"]
 
-[node name="Bathroom" type="Node2D" unique_id=721067638]
+[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_y5w4s"]
+
+[node name="Bathroom" unique_id=1809451776 instance=ExtResource("1_y5w4s")]
+
+[node name="NavButtonLeft" parent="." index="1" unique_id=934337939]
+target_room = "storage"
+
+[node name="NavButtonRight" parent="." index="2" unique_id=1425211887]
+target_room = "bedroom"

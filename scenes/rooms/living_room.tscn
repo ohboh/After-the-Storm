@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://c3n0mh7m6k6pc"]
 
-[node name="LivingRoom" type="Node2D" unique_id=2085404157]
+[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_ndxsf"]
+
+[node name="LivingRoom" unique_id=1809451776 instance=ExtResource("1_ndxsf")]
+
+[node name="NavButtonRight" parent="." index="2" unique_id=1425211887]
+target_room = "dining_room"

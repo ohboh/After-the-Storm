@@ -3,8 +3,22 @@ extends Node
 signal room_change_started(room_id: String)
 signal room_change_completed(room_id: String)
 
-@export_group("Room Registry")
-@export var room_registry: Dictionary[String, PackedScene] = {}
+@export_group("Room Setup")
+## Base folder path where room scenes are located
+@export_dir var room_folder_path: String = "res://scenes/rooms/"
+
+## List of registered room IDs in your project
+var room_registry: Array[String] = [
+	"living_room",
+	"dining_room",
+	"kitchen",
+	"hallway_1f",
+	"stairs_landing",
+	"hallway_2f",
+	"storage",
+	"bathroom",
+	"bedroom"
+]
 
 var current_room_id: String = ""
 var is_transitioning: bool = false
@@ -23,13 +37,14 @@ func change_room(target_room_id: String) -> void:
 	is_transitioning = true
 	room_change_started.emit(target_room_id)
 
-	# Optional: Trigger screen fade out or horror transition effect here
-	# await TransitionManager.fade_out()
+	# Format path dynamically: e.g., "res://scenes/rooms/dining_room.tscn"
+	var scene_path: String = "%s%s.tscn" % [room_folder_path, target_room_id]
 
-	var target_scene: PackedScene = room_registry[target_room_id]
-	get_tree().change_scene_to_packed(target_scene)
+	if ResourceLoader.exists(scene_path):
+		get_tree().change_scene_to_file(scene_path)
+		current_room_id = target_room_id
+	else:
+		push_error("RoomManager: Scene file missing at path '%s'" % scene_path)
 
-	current_room_id = target_room_id
 	is_transitioning = false
-	
 	room_change_completed.emit(target_room_id)

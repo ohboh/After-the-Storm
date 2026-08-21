@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bkin60kfhvbhm"]
+
+[ext_resource type="Script" uid="uid://cghofwxh35qm5" path="res://scripts/base_room.gd" id="1_4x8xk"]
+[ext_resource type="PackedScene" uid="uid://du2l1c1yo4b2p" path="res://scenes/systems/nav_button.tscn" id="1_43ixu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s6u8r"]
+font_size = 100
+
+[node name="BaseRoom" type="Control" unique_id=1809451776 node_paths=PackedStringArray("room_name_display")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4x8xk")
+room_name_display = NodePath("RoomNameDisplay")
+
+[node name="RoomNameDisplay" type="Label" parent="." unique_id=42177647]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 215.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_s6u8r")
+horizontal_alignment = 1
+
+[node name="NavButtonLeft" parent="." unique_id=934337939 instance=ExtResource("1_43ixu")]
+layout_mode = 1
+anchors_preset = 9
+anchor_right = 0.0
+offset_right = 300.0
+grow_horizontal = 1
+
+[node name="NavButtonRight" parent="." unique_id=1425211887 instance=ExtResource("1_43ixu")]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+offset_left = -300.0
+grow_horizontal = 0
+
+[node name="NavButtonDown" parent="." unique_id=844873878 instance=ExtResource("1_43ixu")]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+offset_top = -200.0
+grow_vertical = 0

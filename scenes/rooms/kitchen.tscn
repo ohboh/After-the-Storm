@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://bdv01fec7vywm"]
 
-[node name="Kitchen" type="Node2D" unique_id=1865586233]
+[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_3w07q"]
+
+[node name="Kitchen" unique_id=1809451776 instance=ExtResource("1_3w07q")]
+
+[node name="NavButtonRight" parent="." index="2" unique_id=1425211887]
+target_room = "hallway_1f"
+
+[node name="NavButtonDown" parent="." index="3" unique_id=844873878]
+target_room = "dining_room"
