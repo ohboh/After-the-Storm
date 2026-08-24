@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 
 AudioManager="*uid://dtrfsjsjx1yu0"
 RoomManager="*uid://bqdcsr770yrxy"
+QteManager="*uid://cylw1j1stjoey"
 
 [display]
 

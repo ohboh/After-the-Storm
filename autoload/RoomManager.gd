@@ -4,10 +4,8 @@ signal room_change_started(room_id: String)
 signal room_change_completed(room_id: String)
 
 @export_group("Room Setup")
-## Base folder path where room scenes are located
 @export_dir var room_folder_path: String = "res://scenes/rooms/"
 
-## List of registered room IDs in your project
 var room_registry: Array[String] = [
 	"living_room",
 	"dining_room",
@@ -24,7 +22,7 @@ var current_room_id: String = ""
 var is_transitioning: bool = false
 
 func change_room(target_room_id: String) -> void:
-	if is_transitioning:
+	if is_transitioning or QteManager.is_active:
 		return
 		
 	if not room_registry.has(target_room_id):
@@ -37,7 +35,6 @@ func change_room(target_room_id: String) -> void:
 	is_transitioning = true
 	room_change_started.emit(target_room_id)
 
-	# Format path dynamically: e.g., "res://scenes/rooms/dining_room.tscn"
 	var scene_path: String = "%s%s.tscn" % [room_folder_path, target_room_id]
 
 	if ResourceLoader.exists(scene_path):

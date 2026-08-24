@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cylw1j1stjoey"]
+
+[ext_resource type="Script" uid="uid://bqc7l7wqbg1ys" path="res://autoload/qte_manager.gd" id="1_s8d0d"]
+[ext_resource type="PackedScene" uid="uid://b8b8lte3rq08d" path="res://scenes/systems/QTE_circle.tscn" id="2_aeqt1"]
+
+[node name="QTEManager" type="CanvasLayer" unique_id=632939577]
+layer = 10
+script = ExtResource("1_s8d0d")
+circle_scene = ExtResource("2_aeqt1")
+spawn_interval = 1.0
+
+[node name="Control" type="Control" parent="." unique_id=1619481051]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1249704237]

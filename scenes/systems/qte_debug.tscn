@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cs2yfktmonrov"]
+
+[ext_resource type="Script" uid="uid://ca76i6d0x0867" path="res://scripts/debug_qte.gd" id="1_xlpb8"]
+
+[node name="QTE_DEBUG" type="Node" unique_id=714288216]
+script = ExtResource("1_xlpb8")
