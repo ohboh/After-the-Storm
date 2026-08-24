@@ -2,3 +2,29 @@
 It’s him or me.
 To lead a lie, or to watch him die.
 It’s time to leave him behind.
+[background arg="res://assets/art/backgrounds/entrance1.png" fade="1.0"]
+join Sienna (Tired 1) center
+Sienna: Man, I’m exhausted!
+Sienna: And the hard part hasn’t even started.
+Sienna (Sad 1): It’s a shame Ma and Pa can’t help me out with moving in, but…
+leave Sienna
+There’s a faint rumbling noise coming from the sky, as well as cool air coming from the door.
+join Sienna (Uneasy 1) center
+Sienna: A storm is set to make a landfall. It’s more important they get home safe.
+leave Sienna
+Stretching her limbs, Sienna prepares to haul in the rest of the boxes further inside.
+join Sienna (Happy 1) center
+Sienna: Hm~ Mmm~ I’m so excited for the first day of classes as a college student.”
+Sienna (Happy 2): I already reserved a fit just for this~
+Sienna (Neutral 1): Gah, I hope it doesn’t get muddy.
+Sienna: This storm is too gloomy for a day that I’ve been looking forward to.
+Sienna (Neutral 2): A day to make a fresh start.
+Sienna: A fresh start, huh…?
+Sienna (Sad 1): ...
+Sienna (Tired 1): I wanted this, right?
+Sienna (Uneasy 1): I miss home already.
+leave Sienna
+A loud thunder sounds from outside.
+join Sienna (Uneasy 2) center
+Sienna: This is making me uneasy, bruh.
+Sienna: I should just get busy.

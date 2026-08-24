@@ -10,12 +10,130 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Crying 1",
 &"description": "",
 &"display_name": "Sienna",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Crying 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Crying 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Crying 2": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Crying 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"First Person": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Happy 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy 2": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Happy 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Horrified 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Horrified 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Horrified 2": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Horrified 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Neutral 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Neutral 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Neutral 2": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Neutral 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Sad 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Tired 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Tired 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Uneasy 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Uneasy 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Uneasy 2": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Uneasy 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }

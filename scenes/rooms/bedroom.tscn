@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://v0juaofw4lhy"]
 
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_cwplf"]
+[ext_resource type="PackedScene" uid="uid://cs2yfktmonrov" path="res://scenes/systems/qte_debug.tscn" id="2_1vprx"]
 
 [node name="Bedroom" unique_id=1809451776 instance=ExtResource("1_cwplf")]
 
@@ -9,3 +10,5 @@ target_room = "bathroom"
 
 [node name="NavButtonDown" parent="." index="3" unique_id=844873878]
 target_room = "hallway_2f"
+
+[node name="QTE_DEBUG" parent="." index="4" unique_id=714288216 instance=ExtResource("2_1vprx")]

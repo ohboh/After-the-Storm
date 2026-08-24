@@ -19,7 +19,7 @@ func _ready() -> void:
 	# Ignore standard control mouse filtering
 	mouse_filter = MOUSE_FILTER_IGNORE
 
-func activate(target_id: int, duration: float) -> void:
+func activate(duration: float) -> void:
 	lifespan = duration
 	time_left = duration
 	current_radius = base_radius

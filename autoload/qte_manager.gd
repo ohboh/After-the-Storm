@@ -79,16 +79,16 @@ func _on_spawn_timer_timeout() -> void:
 	
 	new_circle.target_clicked.connect(_on_target_hit)
 	new_circle.target_timed_out.connect(_on_target_missed)
-	new_circle.activate(targets_spawned_count, target_lifespan)
+	new_circle.activate(target_lifespan)
 	
 	targets_spawned_count += 1
 
-func _on_target_hit(node: QTECircle) -> void:
+func _on_target_hit(_node: QTECircle) -> void:
 	hits_count += 1
 	print("QTE Hit: %d/%d" % [hits_count, targets_to_win])
 	_check_game_state()
 
-func _on_target_missed(node: QTECircle) -> void:
+func _on_target_missed(_node: QTECircle) -> void:
 	misses_count += 1
 	print("QTE Miss: %d/%d" % [misses_count, max_misses])
 	_check_game_state()
