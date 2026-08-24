@@ -25,21 +25,45 @@ grow_horizontal = 2
 label_settings = SubResource("LabelSettings_s6u8r")
 horizontal_alignment = 1
 
-[node name="NavButtonLeft" parent="." unique_id=934337939 instance=ExtResource("1_43ixu")]
+[node name="Background" type="TextureRect" parent="." unique_id=1308147324]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Interactables" type="Control" parent="." unique_id=1122649769]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavButtons" type="Control" parent="." unique_id=466182865]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NavButtonLeft" parent="NavButtons" unique_id=934337939 instance=ExtResource("1_43ixu")]
 layout_mode = 1
 anchors_preset = 9
 anchor_right = 0.0
 offset_right = 300.0
 grow_horizontal = 1
 
-[node name="NavButtonRight" parent="." unique_id=1425211887 instance=ExtResource("1_43ixu")]
+[node name="NavButtonRight" parent="NavButtons" unique_id=1425211887 instance=ExtResource("1_43ixu")]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 offset_left = -300.0
 grow_horizontal = 0
 
-[node name="NavButtonDown" parent="." unique_id=844873878 instance=ExtResource("1_43ixu")]
+[node name="NavButtonDown" parent="NavButtons" unique_id=844873878 instance=ExtResource("1_43ixu")]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0

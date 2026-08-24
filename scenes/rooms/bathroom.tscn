@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://iwd7y6kmjcr6"]
 
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_y5w4s"]
+[ext_resource type="Texture2D" uid="uid://wxq2oishqg2j" path="res://assets/art/backgrounds/bathroom1.png" id="2_e0elq"]
 
 [node name="Bathroom" unique_id=1809451776 instance=ExtResource("1_y5w4s")]
 
-[node name="NavButtonLeft" parent="." index="1" unique_id=934337939]
-target_room = "storage"
+[node name="Background" parent="." index="1" unique_id=1308147324]
+texture = ExtResource("2_e0elq")
 
-[node name="NavButtonRight" parent="." index="2" unique_id=1425211887]
+[node name="NavButtonDown" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="2" unique_id=844873878]
 target_room = "bedroom"

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c1w6rns4cqp2s"]
+
+[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_t8q2b"]
+[ext_resource type="Texture2D" uid="uid://cehvxdkrfdes1" path="res://assets/art/backgrounds/entrance1.png" id="2_qa51j"]
+[ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_ddk1k"]
+
+[node name="Entrance Hallway" unique_id=1809451776 instance=ExtResource("1_t8q2b")]
+
+[node name="Background" parent="." index="1" unique_id=1308147324]
+texture = ExtResource("2_qa51j")
+
+[node name="Shoeboxes" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=1214272980 instance=ExtResource("3_ddk1k")]
+layout_mode = 1
+offset_left = 614.0
+offset_top = 814.0
+offset_right = 789.0
+offset_bottom = 968.0
+timeline_name = "intro_interactables"
+label_name = "Shoe Boxes"
+
+[node name="Box 3" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=2068976280 instance=ExtResource("3_ddk1k")]
+layout_mode = 1
+offset_left = 1033.0
+offset_top = 820.0
+offset_right = 1282.0
+offset_bottom = 1042.0
+timeline_name = "intro_interactables"
+label_name = "Box 3"
+
+[node name="Box 2" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="2" unique_id=137382006 instance=ExtResource("3_ddk1k")]
+layout_mode = 1
+offset_left = 1286.0
+offset_top = 768.0
+offset_right = 1697.0
+offset_bottom = 1078.0
+timeline_name = "intro_interactables"
+label_name = "Box 2"

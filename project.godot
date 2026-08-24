@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="After the Storm"
+run/main_scene="uid://2bpvktqap1j0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +21,7 @@ AudioManager="*uid://dtrfsjsjx1yu0"
 RoomManager="*uid://bqdcsr770yrxy"
 QteManager="*uid://cylw1j1stjoey"
 Dialogic="*uid://ds2q0uclmolvu"
+SequenceManager="*uid://kbj76tvk76rm"
 
 [dialogic]
 
@@ -27,13 +29,16 @@ directories/dch_directory={
 "Sienna": "res://characters/Sienna.dch"
 }
 directories/dtl_directory={
-"intro": "res://dialogue/intro.dtl"
+"intro": "res://dialogue/intro.dtl",
+"intro_interactables": "res://dialogue/intro_interactables.dtl",
+"thunder": "res://dialogue/thunder.dtl"
 }
 layout/style_directory={
 "": "res://addons/dialogic/style.tres",
+"cutscene_style": "res://addons/dialogic/cutscene_style.tres",
 "style": "res://addons/dialogic/style.tres"
 }
-layout/style_list=["res://addons/dialogic/style.tres"]
+layout/style_list=["res://addons/dialogic/style.tres", "res://addons/dialogic/cutscene_style.tres"]
 layout/default_style="res://addons/dialogic/style.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -75,6 +80,7 @@ glossary/default_case_sensitive=true
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

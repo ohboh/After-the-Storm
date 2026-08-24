@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://brtfaouae2ogx"]
+
+[ext_resource type="Script" uid="uid://7j6ibqatfa6i" path="res://scripts/interactable.gd" id="1_gwtdp"]
+
+[node name="Interactable" type="TextureButton" unique_id=1214272980]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gwtdp")

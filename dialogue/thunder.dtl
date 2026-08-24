@@ -1,0 +1,22 @@
+join Sienna (Tired 1) center
+Sienna: That should clear the entrance, at least.
+Sienna: It’s so demotivating to organize in this weather!
+Sienna: Can’t a girl just bedrot instead?
+leave Sienna
+Lightning strikes just outside of Sienna’s apartment.
+[background arg="#000000ff" fade="0.0"]
+The apartment is suddenly pitched black.
+Accompanied by the sound of intensifying rain is a loud beeping sound from her phone.
+“Red rainfall warning in the local area.”
+“Be warned of heavy rain, strong winds, and flooding in low level areas.”
+[style name="cutscene_style"]
+“Super Typhoon Julian has arrived.”
+[style name="style"]
+Sienna drops her phone.
+[style name="cutscene_style"]
+“Julian…?”
+“He arrived…?”
+“He arrived…?”
+“There’s no way…”
+“You’re supposed to be gone!”
+[background arg="res://assets/art/backgrounds/entrance2.png" fade="0.0"]

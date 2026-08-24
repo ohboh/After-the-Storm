@@ -16,7 +16,7 @@
 script = ExtResource("2_rwmvm")
 scene = ExtResource("1_vmes0")
 overrides = {
-"global_font_size": "36.0"
+"global_font_size": "34.0"
 }
 
 [sub_resource type="Resource" id="Resource_cg2vt"]
@@ -35,8 +35,7 @@ scene = ExtResource("5_scgou")
 script = ExtResource("2_rwmvm")
 scene = ExtResource("6_jwf35")
 overrides = {
-"box_margin_bottom": "100.0",
-"box_size": "Vector2(1250, 200)",
+"box_size": "Vector2(1250, 150)",
 "name_label_box_offset": "Vector2(0, -30)"
 }
 
@@ -71,4 +70,4 @@ layer_info = {
 "16": SubResource("Resource_tymns"),
 "17": SubResource("Resource_0r5ps")
 }
-metadata/_latest_layer = "13"
+metadata/_latest_layer = ""

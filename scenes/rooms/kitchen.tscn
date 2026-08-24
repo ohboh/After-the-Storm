@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://bdv01fec7vywm"]
 
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_3w07q"]
+[ext_resource type="Texture2D" uid="uid://6ifmhe1t371o" path="res://assets/art/backgrounds/kitchen.png" id="2_p7bu6"]
 
 [node name="Kitchen" unique_id=1809451776 instance=ExtResource("1_3w07q")]
 
-[node name="NavButtonRight" parent="." index="2" unique_id=1425211887]
-target_room = "hallway_1f"
+[node name="Background" parent="." index="1" unique_id=1308147324]
+texture = ExtResource("2_p7bu6")
 
-[node name="NavButtonDown" parent="." index="3" unique_id=844873878]
-target_room = "dining_room"
+[node name="NavButtonRight" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="1" unique_id=1425211887]
+target_room = "bedroom"
+
+[node name="NavButtonDown" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="2" unique_id=844873878]
+target_room = "living_room"

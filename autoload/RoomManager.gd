@@ -15,7 +15,8 @@ var room_registry: Array[String] = [
 	"hallway_2f",
 	"storage",
 	"bathroom",
-	"bedroom"
+	"bedroom",
+	"entrance_hallway"
 ]
 
 var current_room_id: String = ""
