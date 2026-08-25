@@ -39,21 +39,19 @@ func _ready() -> void:
 	spawn_timer.timeout.connect(_on_spawn_timer_timeout)
 	screen_size = get_viewport().get_visible_rect().size
 
-## initiate a QTE
 func start_challenge(difficulty_preset: Dictionary = {}) -> void:
 	if is_active: return
 	
-	# Optional: Apply difficulty overrides from the call
 	if difficulty_preset.has("targets_to_win"): targets_to_win = difficulty_preset["targets_to_win"]
 	if difficulty_preset.has("target_lifespan"): target_lifespan = difficulty_preset["target_lifespan"]
-	# ... (apply other overrides)
+	if difficulty_preset.has("max_misses"): max_misses = difficulty_preset["max_misses"]
+	if difficulty_preset.has("spawn_interval"): spawn_interval = difficulty_preset["spawn_interval"]
 
 	is_active = true
 	hits_count = 0
 	misses_count = 0
 	targets_spawned_count = 0
 	
-	# Remove any leftover circles
 	for child in container.get_children():
 		child.queue_free()
 		
@@ -65,8 +63,12 @@ func start_challenge(difficulty_preset: Dictionary = {}) -> void:
 func _on_spawn_timer_timeout() -> void:
 	if not is_active:
 		return
+
+	if targets_spawned_count >= targets_to_win + max_misses:
+		spawn_timer.stop()
+		return
 		
-	var margin: float = 200
+	var margin: float = spawn_margin
 	var random_pos = Vector2(
 		randf_range(margin, screen_size.x - margin),
 		randf_range(margin, screen_size.y - margin)
@@ -76,7 +78,6 @@ func _on_spawn_timer_timeout() -> void:
 	container.add_child(new_circle)
 	
 	new_circle.position = random_pos
-	
 	new_circle.target_clicked.connect(_on_target_hit)
 	new_circle.target_timed_out.connect(_on_target_missed)
 	new_circle.activate(target_lifespan)
@@ -84,11 +85,13 @@ func _on_spawn_timer_timeout() -> void:
 	targets_spawned_count += 1
 
 func _on_target_hit(_node: QTECircle) -> void:
+	if not is_active: return
 	hits_count += 1
 	print("QTE Hit: %d/%d" % [hits_count, targets_to_win])
 	_check_game_state()
 
 func _on_target_missed(_node: QTECircle) -> void:
+	if not is_active: return
 	misses_count += 1
 	print("QTE Miss: %d/%d" % [misses_count, max_misses])
 	_check_game_state()
@@ -105,11 +108,14 @@ func _end_challenge(success: bool) -> void:
 	is_active = false
 	spawn_timer.stop()
 	
+	for child in container.get_children():
+		child.queue_free()
+
 	if success:
 		print("QTE CHALLENGE WON!")
 	else:
 		print("QTE CHALLENGE FAILED!")
 		
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.3).timeout
 	hide()
 	qte_challenge_completed.emit(success)

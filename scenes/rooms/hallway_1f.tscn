@@ -8,7 +8,7 @@
 [node name="Background" parent="." index="1" unique_id=1308147324]
 texture = ExtResource("2_37rmo")
 
-[node name="NavButtons" parent="." index="2" unique_id=466182865]
+[node name="NavButtons" parent="." index="3" unique_id=466182865]
 z_index = 1
 
 [node name="NavButtonDown" parent="NavButtons" index="2" unique_id=844873878]
