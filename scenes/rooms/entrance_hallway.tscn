@@ -35,3 +35,6 @@ offset_right = 1697.0
 offset_bottom = 1078.0
 timeline_name = "intro_interactables"
 label_name = "Box 2"
+
+[node name="NavButtons" parent="." index="3" unique_id=466182865]
+mouse_filter = 2

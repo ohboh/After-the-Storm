@@ -1,10 +1,11 @@
+do RoomManager.change_room("entrance_hallway")
 [background arg="#000000ff" fade="0.0"]
 [style name="cutscene_style"]
 It’s him or me.
 To lead a lie, or to watch him die.
 It’s time to leave him behind.
 [style name="style"]
-[background arg="res://assets/art/backgrounds/entrance1.png" fade="1.0"]
+[background fade="1.0"]
 join Sienna (Tired 1) center
 Sienna: Man, I’m exhausted!
 Sienna: And the hard part hasn’t even started.
@@ -30,4 +31,3 @@ A loud thunder sounds from outside.
 join Sienna (Uneasy 2) center
 Sienna: This is making me uneasy, bruh.
 Sienna (Uneasy 1): I should just get busy.
-do SequenceManager.start_gameplay()
