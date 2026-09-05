@@ -1,21 +1,28 @@
 label Shoe Boxes
 Sienna (First Person): My very chunky boots.
 Sienna: And slippers, running shoes, and sandals.
+jump to_thunder
 [end_timeline]
 label Box 1
 Sienna (First Person): My art and stationary box.
 Sienna: Which is probably a lot more than what I would actually need for my courses.
 Sienna: Your prof isn’t going to make you pass a painting, why do you have an acrylic set, Sienna?
 Sienna: It just feels too wrong to leave them behind!
+jump to_thunder
 [end_timeline]
 label Box 2
 Sienna (First Person): Groceries that were bought earlier.
 Sienna: This could feed me for a month…
 Sienna: I might as well be thankful. This is gonna be the most groceries I’ll have in here throughout my college life.
+jump to_thunder
 [end_timeline]
 label Box 3
 Sienna (First Person): Some framed pictures of me and my parents.
 Sienna: ...
 Sienna closes the box.
-jump thunder/
+jump to_thunder
 [end_timeline]
+label to_thunder
+set {intro_interacted} += 1.0
+if {intro_interacted} == 3.0:
+	jump intro_thunder/

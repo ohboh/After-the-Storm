@@ -6,28 +6,11 @@ signal room_change_completed(room_id: String)
 @export_group("Room Setup")
 @export_dir var room_folder_path: String = "res://scenes/rooms/"
 
-var room_registry: Array[String] = [
-	"living_room",
-	"dining_room",
-	"kitchen",
-	"hallway_1f",
-	"stairs_landing",
-	"hallway_2f",
-	"storage",
-	"bathroom",
-	"bedroom",
-	"entrance_hallway"
-]
-
 var current_room_id: String = ""
 var is_transitioning: bool = false
 
 func change_room(target_room_id: String) -> void:
 	if is_transitioning or QteManager.is_active:
-		return
-		
-	if not room_registry.has(target_room_id):
-		push_error("RoomManager: Room ID '%s' not found in registry." % target_room_id)
 		return
 
 	if target_room_id == current_room_id:

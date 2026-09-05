@@ -26,12 +26,16 @@ SequenceManager="*uid://kbj76tvk76rm"
 [dialogic]
 
 directories/dch_directory={
+"Ghost": "res://characters/Ghost.dch",
 "Sienna": "res://characters/Sienna.dch"
 }
 directories/dtl_directory={
 "intro": "res://dialogue/intro.dtl",
+"intro2_interactables": "res://dialogue/intro2_interactables.dtl",
 "intro_interactables": "res://dialogue/intro_interactables.dtl",
-"thunder": "res://dialogue/thunder.dtl"
+"intro_qte_fail": "res://dialogue/intro_qte_fail.dtl",
+"intro_qte_success": "res://dialogue/intro_qte_success.dtl",
+"intro_thunder": "res://dialogue/intro_thunder.dtl"
 }
 layout/style_directory={
 "": "res://addons/dialogic/style.tres",
@@ -72,7 +76,9 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-variables={}
+variables={
+"intro_interacted": 0
+}
 glossary/default_case_sensitive=true
 
 [display]

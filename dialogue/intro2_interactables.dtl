@@ -1,0 +1,24 @@
+label Lightswitch
+Sienna flips the switch on and off.
+Sienna (First Person): This is so buns…
+Sienna: I don’t want to stay in this dark.
+jump to_thunder
+label Door
+Sienna opens the door to get a good look outside,
+Sienna opens the door to get a good look outside,
+Only for the wind to shut the door closed, almost catching Sienna’s fingers in the gap.
+Sienna (First Person): Okay, that’s dangerous.
+Sienna: I don’t think going outside might be wise right now.
+Sienna: I’ll be safer inside,
+Sienna: I think.
+jump to_thunder
+label Phone
+Sienna (First Person): I got distracted with organizing my things that I didn’t get to charge my phone earlier.
+Sienna: Let’s try not to use this as a flashlight then.
+Sienna: I need to call Ma and Pa. They could be in danger.
+Sienna: And…
+Sienna: I don’t think going outside might be wise right now.
+Sienna: I’ll be safer inside,
+Sienna: I think.
+jump to_thunder
+label

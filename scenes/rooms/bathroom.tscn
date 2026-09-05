@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_y5w4s"]
 [ext_resource type="Texture2D" uid="uid://wxq2oishqg2j" path="res://assets/art/backgrounds/bathroom1.png" id="2_e0elq"]
+[ext_resource type="PackedScene" uid="uid://cs2yfktmonrov" path="res://scenes/systems/qte_debug.tscn" id="3_8pl6i"]
 
 [node name="Bathroom" unique_id=1809451776 instance=ExtResource("1_y5w4s")]
 
@@ -10,3 +11,5 @@ texture = ExtResource("2_e0elq")
 
 [node name="NavButtonDown" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="2" unique_id=844873878]
 target_room = "bedroom"
+
+[node name="QTE_DEBUG" parent="." index="4" unique_id=714288216 instance=ExtResource("3_8pl6i")]

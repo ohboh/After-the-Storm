@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cuyucg5e22tpw"]
+
+[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_hr6ka"]
+[ext_resource type="Texture2D" uid="uid://c55xn350er4ip" path="res://assets/art/backgrounds/entrance2.png" id="2_hr6ka"]
+[ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_d6hfw"]
+
+[node name="Entrance Hallway" unique_id=1809451776 instance=ExtResource("1_hr6ka")]
+
+[node name="Background" parent="." index="1" unique_id=1308147324]
+texture = ExtResource("2_hr6ka")
+
+[node name="Lightswitch" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=2068976280 instance=ExtResource("3_d6hfw")]
+layout_mode = 1
+offset_left = 684.0
+offset_top = 469.0
+offset_right = 757.0
+offset_bottom = 552.0
+timeline_name = "intro_interactables"
+label_name = "Lightswitch"
+
+[node name="Door" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=137382006 instance=ExtResource("3_d6hfw")]
+layout_mode = 1
+offset_left = 814.0
+offset_top = 108.0
+offset_right = 1223.0
+offset_bottom = 911.0
+timeline_name = "intro_interactables"
+label_name = "Door"
+
+[node name="Phone" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="2" unique_id=1214272980 instance=ExtResource("3_d6hfw")]
+layout_mode = 1
+offset_left = 797.0
+offset_top = 986.0
+offset_right = 909.0
+offset_bottom = 1045.0
+timeline_name = "intro_interactables"
+label_name = "Phone"
+
+[node name="NavButtons" parent="." index="3" unique_id=466182865]
+mouse_filter = 2
