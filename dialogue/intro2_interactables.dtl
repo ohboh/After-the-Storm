@@ -3,6 +3,7 @@ Sienna flips the switch on and off.
 Sienna (First Person): This is so buns…
 Sienna: I don’t want to stay in this dark.
 jump to_thunder
+[end_timeline]
 label Door
 Sienna opens the door to get a good look outside,
 Sienna opens the door to get a good look outside,
@@ -12,6 +13,7 @@ Sienna: I don’t think going outside might be wise right now.
 Sienna: I’ll be safer inside,
 Sienna: I think.
 jump to_thunder
+[end_timeline]
 label Phone
 Sienna (First Person): I got distracted with organizing my things that I didn’t get to charge my phone earlier.
 Sienna: Let’s try not to use this as a flashlight then.
@@ -21,4 +23,5 @@ Sienna: I don’t think going outside might be wise right now.
 Sienna: I’ll be safer inside,
 Sienna: I think.
 jump to_thunder
+[end_timeline]
 label

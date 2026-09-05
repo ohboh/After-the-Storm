@@ -21,7 +21,7 @@ AudioManager="*uid://dtrfsjsjx1yu0"
 RoomManager="*uid://bqdcsr770yrxy"
 QteManager="*uid://cylw1j1stjoey"
 Dialogic="*uid://ds2q0uclmolvu"
-SequenceManager="*uid://kbj76tvk76rm"
+MouseTooltip="*uid://bl6a24ttbpj6a"
 
 [dialogic]
 

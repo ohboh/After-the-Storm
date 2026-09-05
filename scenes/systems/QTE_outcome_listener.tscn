@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bbulio60wnb0q"]
+
+[ext_resource type="Script" uid="uid://dh4oaqj7yfb5j" path="res://scripts/qte_outcome_listener.gd" id="1_a1rab"]
+
+[node name="QteOutcomeListener" type="Node" unique_id=577895288]
+script = ExtResource("1_a1rab")

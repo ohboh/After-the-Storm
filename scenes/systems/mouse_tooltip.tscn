@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bl6a24ttbpj6a"]
+
+[ext_resource type="Script" uid="uid://2ionucqs5118" path="res://scripts/mouse_tooltip.gd" id="1_f13kk"]
+
+[node name="MouseTooltip" type="CanvasLayer" unique_id=1718343223]
+script = ExtResource("1_f13kk")
+
+[node name="Label" type="Label" parent="." unique_id=587503140]
+offset_right = 40.0
+offset_bottom = 23.0

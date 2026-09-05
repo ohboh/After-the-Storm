@@ -16,7 +16,6 @@ Sienna drops her phone.
 [style name="cutscene_style"]
 “Julian…?”
 “He arrived…?”
-“He arrived…?”
 “There’s no way…”
 “You’re supposed to be gone!”
-do QteManager.start_challenge("easy")
+do QteManager.start_challenge()

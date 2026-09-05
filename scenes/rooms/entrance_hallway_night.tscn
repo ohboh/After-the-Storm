@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_hr6ka"]
 [ext_resource type="Texture2D" uid="uid://c55xn350er4ip" path="res://assets/art/backgrounds/entrance2.png" id="2_hr6ka"]
 [ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_d6hfw"]
+[ext_resource type="PackedScene" uid="uid://bbulio60wnb0q" path="res://scenes/systems/QTE_outcome_listener.tscn" id="4_n6pnd"]
 
 [node name="Entrance Hallway" unique_id=1809451776 instance=ExtResource("1_hr6ka")]
 
@@ -38,3 +39,7 @@ label_name = "Phone"
 
 [node name="NavButtons" parent="." index="3" unique_id=466182865]
 mouse_filter = 2
+
+[node name="QteOutcomeListener" parent="." index="4" unique_id=577895288 instance=ExtResource("4_n6pnd")]
+success_timeline = "intro_qte_success"
+fail_timeline = "intro_qte_fail"
