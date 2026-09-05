@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ngub5we1jjn8"]
+
+[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_vvysf"]
+[ext_resource type="Texture2D" uid="uid://bt61ryd3pfo8c" path="res://assets/art/backgrounds/entrance3.png" id="2_au2at"]
+
+[node name="Hallway" unique_id=1809451776 instance=ExtResource("1_vvysf")]
+
+[node name="Background" parent="." index="1" unique_id=1308147324]
+texture = ExtResource("2_au2at")
+
+[node name="NavButtons" parent="." index="3" unique_id=466182865]
+z_index = 1
+
+[node name="NavButtonRight" parent="NavButtons" index="1" unique_id=1425211887]
+offset_left = -492.0
+target_room = "kitchen"
+
+[node name="NavButtonDown" parent="NavButtons" index="2" unique_id=844873878]
+offset_left = 770.0
+offset_top = -998.0
+offset_right = -672.0
+offset_bottom = -178.0
+target_room = "living_room"

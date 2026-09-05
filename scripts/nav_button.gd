@@ -1,7 +1,7 @@
 class_name NavButton
 extends TextureButton
 
-var target_room: String = ""
+@export var target_room: String = ""
 @onready var label: Label = $Label
 
 @export_group("Audio / Juice")

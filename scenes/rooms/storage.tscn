@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://be6v7c3320qcw"]
-
-[ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_7ptt4"]
-[ext_resource type="Texture2D" uid="uid://ddmjac85670rm" path="res://assets/art/backgrounds/closet.png" id="2_uan81"]
-
-[node name="Storage" unique_id=1809451776 instance=ExtResource("1_7ptt4")]
-
-[node name="Background" parent="." index="1" unique_id=1308147324]
-texture = ExtResource("2_uan81")

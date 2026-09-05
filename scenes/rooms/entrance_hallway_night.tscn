@@ -40,6 +40,17 @@ label_name = "Phone"
 [node name="NavButtons" parent="." index="3" unique_id=466182865]
 mouse_filter = 2
 
+[node name="NavButtonRight" parent="NavButtons" index="1" unique_id=1425211887]
+offset_left = -488.0
+target_room = "kitchen"
+
+[node name="NavButtonDown" parent="NavButtons" index="2" unique_id=844873878]
+offset_left = 817.0
+offset_top = -962.0
+offset_right = -693.0
+offset_bottom = -167.0
+target_room = "living_room"
+
 [node name="QteOutcomeListener" parent="." index="4" unique_id=577895288 instance=ExtResource("4_n6pnd")]
 success_timeline = "intro_qte_success"
 fail_timeline = "intro_qte_fail"
