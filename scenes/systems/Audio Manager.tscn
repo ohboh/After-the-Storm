@@ -37,4 +37,6 @@
 script = ExtResource("1_yuvqe")
 audio_files = Array[AudioStream]([ExtResource("2_4bd5e"), ExtResource("3_vh4y6"), ExtResource("4_q36gw"), ExtResource("5_lr3i3"), ExtResource("6_2004y"), ExtResource("7_bq18k"), ExtResource("8_6nc6o"), ExtResource("9_oiq4t"), ExtResource("10_ytmd1"), ExtResource("11_uutxv"), ExtResource("12_qyfkv"), ExtResource("13_8c04c"), ExtResource("14_8mpxe"), ExtResource("15_wyhx8"), ExtResource("16_bi65w"), ExtResource("17_r21gj"), ExtResource("18_jgx3v"), ExtResource("19_j8dd8"), ExtResource("20_f4r4r"), ExtResource("21_4cpbt"), ExtResource("22_q8vyd"), ExtResource("23_s01v6"), ExtResource("24_m08uw"), ExtResource("25_ksmjv"), ExtResource("26_u6jt7"), ExtResource("27_3v7of"), ExtResource("28_74bd2"), ExtResource("29_vdxjk"), ExtResource("30_nj8di"), ExtResource("31_cs6bj"), ExtResource("32_085lh")])
 ambient_volume = 0.1
-sfx_volume = 0.5
+player_sfx_volume = 0.3
+ghost_sfx_volume = 0.5
+player_pitch_randomness = 0.1

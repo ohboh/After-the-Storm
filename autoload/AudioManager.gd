@@ -5,7 +5,7 @@ extends Node
 @export var audio_files: Array[AudioStream] = []
 
 @export_group("Layer Volumes")
-## Master volume slider (0.0 = Mute, 1.0 = Max)
+## Master volume sliders (0.0 = Mute, 1.0 = Max)
 @export_range(0.0, 1.0, 0.05) var bgm_volume: float = 0.8:
 	set(value):
 		bgm_volume = value
@@ -21,7 +21,14 @@ extends Node
 		cue_volume = value
 		_update_volume(cue_player, cue_volume)
 
-@export_range(0.0, 1.0, 0.05) var sfx_volume: float = 1.0
+@export_range(0.0, 1.0, 0.05) var player_sfx_volume: float = 1.0
+@export_range(0.0, 1.0, 0.05) var ghost_sfx_volume: float = 1.0
+
+@export_group("Pitch Randomization")
+## Default pitch variation range for Player SFX (e.g. 0.1 gives 0.9x to 1.1x speed/pitch)
+@export_range(0.0, 0.5, 0.01) var player_pitch_randomness: float = 0.08
+## Default pitch variation range for Ghost SFX
+@export_range(0.0, 0.5, 0.01) var ghost_pitch_randomness: float = 0.15
 
 # Automated lookup map built from file names
 var library: Dictionary = {}
@@ -92,15 +99,29 @@ func play_cue(audio: Variant) -> void:
 func stop_cue() -> void:
 	cue_player.stop()
 
-## SFX Layer (Overlapping one-shots)
-func play_sfx(audio: Variant) -> void:
+## Player SFX Layer (Footsteps, UI Clicks, Item Pickups, Door UI)
+func play_player_sfx(audio: Variant, pitch_variation: float = -1.0) -> void:
+	var var_range: float = pitch_variation if pitch_variation >= 0.0 else player_pitch_randomness
+	_play_one_shot(audio, player_sfx_volume, var_range)
+
+## Ghost / Stalker SFX Layer (Roars, Screams, Whispers, Scratches)
+func play_ghost_sfx(audio: Variant, pitch_variation: float = -1.0) -> void:
+	var var_range: float = pitch_variation if pitch_variation >= 0.0 else ghost_pitch_randomness
+	_play_one_shot(audio, ghost_sfx_volume, var_range)
+
+# Generic one-shot spawner for overlapping sound effects with pitch modulation
+func _play_one_shot(audio: Variant, volume_level: float, pitch_range: float) -> void:
 	var stream: AudioStream = _resolve_stream(audio)
 	if not stream: return
 	
 	var temp_player = AudioStreamPlayer.new()
 	add_child(temp_player)
 	temp_player.stream = stream
-	_update_volume(temp_player, sfx_volume)
+	_update_volume(temp_player, volume_level)
+	
+	if pitch_range > 0.0:
+		temp_player.pitch_scale = randf_range(1.0 - pitch_range, 1.0 + pitch_range)
+		
 	temp_player.play()
 	temp_player.finished.connect(temp_player.queue_free)
 

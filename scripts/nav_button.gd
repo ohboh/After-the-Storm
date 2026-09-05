@@ -22,7 +22,7 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	MouseTooltip.hide_tooltip()
-	AudioManager.play_sfx("door_open")
+	AudioManager.play_player_sfx("door_open")
 	RoomManager.change_room(target_room)
 
 func _on_mouse_entered() -> void:
