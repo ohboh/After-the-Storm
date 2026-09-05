@@ -2,12 +2,41 @@
 
 [ext_resource type="Script" uid="uid://bqc7l7wqbg1ys" path="res://autoload/qte_manager.gd" id="1_s8d0d"]
 [ext_resource type="PackedScene" uid="uid://b8b8lte3rq08d" path="res://scenes/systems/QTE_circle.tscn" id="2_aeqt1"]
+[ext_resource type="Texture2D" uid="uid://ddvxidkn16v8a" path="res://assets/art/portraits/Ghost.png" id="3_ywb5t"]
 
 [node name="QTEManager" type="CanvasLayer" unique_id=632939577]
 layer = 10
 script = ExtResource("1_s8d0d")
 circle_scene = ExtResource("2_aeqt1")
 spawn_interval = 1.0
+
+[node name="BackgroundDim" type="ColorRect" parent="." unique_id=105045803]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Ghost" type="TextureRect" parent="." unique_id=479476018]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_ywb5t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Noise" type="ColorRect" parent="." unique_id=907152265]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Control" type="Control" parent="." unique_id=1619481051]
 layout_mode = 3

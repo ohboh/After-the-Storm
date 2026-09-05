@@ -4,10 +4,9 @@ Sienna: It’s so demotivating to organize in this weather!
 Sienna: Can’t a girl just bedrot instead?
 leave Sienna
 Lightning strikes just outside of Sienna’s apartment.
-[background arg="#000000ff" fade="0.0"]
+do RoomManager.change_room("entrance_hallway_night")
 The apartment is suddenly pitched black.
 Accompanied by the sound of intensifying rain is a loud beeping sound from her phone.
-[background arg="res://assets/art/backgrounds/entrance2.png" fade="0.0"]
 “Red rainfall warning in the local area.”
 “Be warned of heavy rain, strong winds, and flooding in low level areas.”
 [style name="cutscene_style"]
@@ -20,4 +19,4 @@ Sienna drops her phone.
 “He arrived…?”
 “There’s no way…”
 “You’re supposed to be gone!”
-[background arg="res://assets/art/backgrounds/entrance2.png" fade="0.0"]
+do QteManager.start_challenge("easy")

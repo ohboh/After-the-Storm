@@ -15,7 +15,7 @@ offset_left = 684.0
 offset_top = 469.0
 offset_right = 757.0
 offset_bottom = 552.0
-timeline_name = "intro_interactables"
+timeline_name = "intro2_interactables"
 label_name = "Lightswitch"
 
 [node name="Door" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=137382006 instance=ExtResource("3_d6hfw")]
@@ -24,7 +24,7 @@ offset_left = 814.0
 offset_top = 108.0
 offset_right = 1223.0
 offset_bottom = 911.0
-timeline_name = "intro_interactables"
+timeline_name = "intro2_interactables"
 label_name = "Door"
 
 [node name="Phone" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="2" unique_id=1214272980 instance=ExtResource("3_d6hfw")]
@@ -33,7 +33,7 @@ offset_left = 797.0
 offset_top = 986.0
 offset_right = 909.0
 offset_bottom = 1045.0
-timeline_name = "intro_interactables"
+timeline_name = "intro2_interactables"
 label_name = "Phone"
 
 [node name="NavButtons" parent="." index="3" unique_id=466182865]
