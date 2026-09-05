@@ -10,6 +10,7 @@ do AudioManager.stop_bgm()
 [background arg="#000000ff" fade="0.0"]
 The apartment is suddenly pitched black.
 Accompanied by the sound of intensifying rain is a loud beeping sound from her phone.
+audio "res://assets/sounds/sfx/ring.mp3"
 “Red rainfall warning in the local area.”
 “Be warned of heavy rain, strong winds, and flooding in low level areas.”
 [style name="cutscene_style"]

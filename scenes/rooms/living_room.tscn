@@ -3,11 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_ndxsf"]
 [ext_resource type="Texture2D" uid="uid://cr7wkosqirjo2" path="res://assets/art/backgrounds/livingRoom.png" id="2_bmq3m"]
 [ext_resource type="PackedScene" uid="uid://du2l1c1yo4b2p" path="res://scenes/systems/nav_button.tscn" id="3_fbuym"]
+[ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_j6grr"]
 
 [node name="LivingRoom" unique_id=1809451776 instance=ExtResource("1_ndxsf")]
 
 [node name="Background" parent="." index="1" unique_id=1308147324]
 texture = ExtResource("2_bmq3m")
+
+[node name="Interactable" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=1214272980 instance=ExtResource("3_j6grr")]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 669.0
+offset_right = 599.0
+offset_bottom = 993.0
 
 [node name="NavButtonLeft" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="0" unique_id=934337939]
 offset_bottom = -540.0
