@@ -109,6 +109,8 @@ func _start_ghost_creep() -> void:
 	if ghost_tween: 
 		ghost_tween.kill()
 	
+	AudioManager.play_bgm("sigmahorror")
+	
 	ghost_sprite.scale = Vector2(1, 1)
 	ghost_sprite.pivot_offset = ghost_sprite.size / 2.0
 	ghost_base_position = (screen_size / 2.0) - (ghost_sprite.size / 2.0)
@@ -175,6 +177,7 @@ func _check_game_state() -> void:
 func _end_challenge(success: bool) -> void:
 	is_active = false
 	spawn_timer.stop()
+	AudioManager.stop_bgm()
 	
 	if ghost_tween: 
 		ghost_tween.kill()

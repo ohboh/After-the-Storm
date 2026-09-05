@@ -2,17 +2,16 @@ label Lightswitch
 Sienna flips the switch on and off.
 Sienna (First Person): This is so buns…
 Sienna: I don’t want to stay in this dark.
-jump to_thunder
+jump to_explore
 [end_timeline]
 label Door
-Sienna opens the door to get a good look outside,
 Sienna opens the door to get a good look outside,
 Only for the wind to shut the door closed, almost catching Sienna’s fingers in the gap.
 Sienna (First Person): Okay, that’s dangerous.
 Sienna: I don’t think going outside might be wise right now.
 Sienna: I’ll be safer inside,
 Sienna: I think.
-jump to_thunder
+jump to_explore
 [end_timeline]
 label Phone
 Sienna (First Person): I got distracted with organizing my things that I didn’t get to charge my phone earlier.
@@ -22,6 +21,12 @@ Sienna: And…
 Sienna: I don’t think going outside might be wise right now.
 Sienna: I’ll be safer inside,
 Sienna: I think.
-jump to_thunder
+jump to_explore
 [end_timeline]
-label
+label to_explore
+set {intro2_interacted} += 1.0
+if {intro2_interacted} == 3.0:
+	do RoomManager.change_room("hallway")
+	Explore other areas of the house.
+	do AudioManager.play_bgm("warp_liminal")
+	do AudioManager.play_ambient("rain")

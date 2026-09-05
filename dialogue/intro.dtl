@@ -6,6 +6,8 @@ To lead a lie, or to watch him die.
 It’s time to leave him behind.
 [style name="style"]
 [background fade="1.0"]
+do AudioManager.play_bgm("at_home_night")
+do AudioManager.play_ambient("rain")
 join Sienna (Tired 1) center
 Sienna: Man, I’m exhausted!
 Sienna: And the hard part hasn’t even started.
@@ -27,6 +29,7 @@ Sienna (Sad 1): ...
 Sienna (Tired 1): I wanted this, right?
 Sienna (Uneasy 1): I miss home already.
 leave Sienna
+audio "res://assets/sounds/sfx/thunder.mp3"
 A loud thunder sounds from outside.
 join Sienna (Uneasy 2) center
 Sienna: This is making me uneasy, bruh.

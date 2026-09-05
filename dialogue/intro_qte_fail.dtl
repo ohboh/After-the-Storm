@@ -1,4 +1,5 @@
-Ghost (Disembodied): You took my life,
-Ghost: And I’ll take over your body.
-Ghost: It’s you or me, right?
+[background arg="res://assets/art/cg/jumpscare.jpg" fade="0.0"]
+You took my life,
+And I’ll take over your body.
+It’s you or me, right?
 do

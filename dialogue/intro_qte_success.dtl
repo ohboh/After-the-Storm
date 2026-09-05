@@ -1,3 +1,4 @@
+do AudioManager.play_bgm("drowning_teddy")
 Sienna (First Person): Stop! I don’t want to see you anymore!
 Sienna: ...
 Sienna: What just happened…?

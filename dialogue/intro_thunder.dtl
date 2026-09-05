@@ -4,7 +4,10 @@ Sienna: It’s so demotivating to organize in this weather!
 Sienna: Can’t a girl just bedrot instead?
 leave Sienna
 Lightning strikes just outside of Sienna’s apartment.
+audio "res://assets/sounds/sfx/thunder.mp3"
 do RoomManager.change_room("entrance_hallway_night")
+do AudioManager.stop_bgm()
+[background arg="#000000ff" fade="0.0"]
 The apartment is suddenly pitched black.
 Accompanied by the sound of intensifying rain is a loud beeping sound from her phone.
 “Red rainfall warning in the local area.”
@@ -13,6 +16,7 @@ Accompanied by the sound of intensifying rain is a loud beeping sound from her p
 “Super Typhoon Julian has arrived.”
 [style name="style"]
 Sienna drops her phone.
+[background fade="0.5"]
 [style name="cutscene_style"]
 “Julian…?”
 “He arrived…?”

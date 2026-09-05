@@ -16,8 +16,4 @@ offset_left = -492.0
 target_room = "kitchen"
 
 [node name="NavButtonDown" parent="NavButtons" index="2" unique_id=844873878]
-offset_left = 770.0
-offset_top = -998.0
-offset_right = -672.0
-offset_bottom = -178.0
 target_room = "living_room"

@@ -22,17 +22,10 @@ func _ready() -> void:
 
 func _on_pressed() -> void:
 	MouseTooltip.hide_tooltip()
-	
-	if click_sfx and AudioManager:
-		AudioManager.play_sfx(click_sfx)
-		
+	AudioManager.play_sfx("door_open")
 	RoomManager.change_room(target_room)
 
 func _on_mouse_entered() -> void:
-	if hover_sfx and AudioManager:
-		AudioManager.play_sfx(hover_sfx)
-		
-	# Display cursor tooltip using target_room
 	MouseTooltip.show_tooltip("Go to " + target_room.capitalize())
 
 func _on_mouse_exited() -> void:
