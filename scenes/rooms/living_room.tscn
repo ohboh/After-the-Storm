@@ -4,18 +4,23 @@
 [ext_resource type="Texture2D" uid="uid://cr7wkosqirjo2" path="res://assets/art/backgrounds/livingRoom.png" id="2_bmq3m"]
 [ext_resource type="PackedScene" uid="uid://du2l1c1yo4b2p" path="res://scenes/systems/nav_button.tscn" id="3_fbuym"]
 [ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_j6grr"]
+[ext_resource type="PackedScene" uid="uid://bbulio60wnb0q" path="res://scenes/systems/QTE_outcome_listener.tscn" id="5_qlgtg"]
 
 [node name="LivingRoom" unique_id=1809451776 instance=ExtResource("1_ndxsf")]
 
 [node name="Background" parent="." index="1" unique_id=1308147324]
 texture = ExtResource("2_bmq3m")
 
-[node name="Interactable" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=1214272980 instance=ExtResource("3_j6grr")]
+[node name="EmergencyKit" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=1214272980 instance=ExtResource("3_j6grr")]
 layout_mode = 0
 offset_left = 324.0
 offset_top = 669.0
 offset_right = 599.0
 offset_bottom = 993.0
+timeline_name = "intro_livingroom"
+label_name = "emergency_kit"
+is_conditional = true
+required_variable_name = "livingroom_firsttime"
 
 [node name="NavButtonLeft" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="0" unique_id=934337939]
 offset_bottom = -540.0
@@ -35,3 +40,7 @@ target_room = "kitchen"
 
 [node name="NavButtonDown" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="3" unique_id=844873878]
 target_room = "hallway"
+
+[node name="QteOutcomeListener" parent="." index="4" unique_id=577895288 instance=ExtResource("5_qlgtg")]
+success_timeline = "intro_livingroom_qte_success"
+fail_timeline = "intro_livingroom_qte_fail"

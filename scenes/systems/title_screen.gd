@@ -1,0 +1,12 @@
+extends Control
+
+@export_file("*.tscn") var main_game_scene: String
+
+@onready var start_button: Button = $StartButton
+
+func _ready() -> void:
+	start_button.pressed.connect(_on_start_pressed)
+	start_button.grab_focus()
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene_to_file(main_game_scene)

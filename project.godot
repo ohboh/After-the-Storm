@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="After the Storm"
-run/main_scene="uid://2bpvktqap1j0"
+run/main_scene="uid://rfmejqli8gtn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -22,17 +22,22 @@ QteManager="*uid://cylw1j1stjoey"
 Dialogic="*uid://ds2q0uclmolvu"
 MouseTooltip="*uid://bl6a24ttbpj6a"
 AudioManager="*uid://cemm6tkggxgid"
+Shaders="*uid://doi3pbvixxlwe"
 
 [dialogic]
 
 directories/dch_directory={
 "Ghost": "res://characters/Ghost.dch",
+"Item": "res://characters/Item.dch",
 "Sienna": "res://characters/Sienna.dch"
 }
 directories/dtl_directory={
 "intro": "res://dialogue/intro.dtl",
 "intro2_interactables": "res://dialogue/intro2_interactables.dtl",
 "intro_interactables": "res://dialogue/intro_interactables.dtl",
+"intro_livingroom": "res://dialogue/intro_livingroom.dtl",
+"intro_livingroom_qte_fail": "res://dialogue/intro_livingroom_qte_fail.dtl",
+"intro_livingroom_qte_success": "res://dialogue/intro_livingroom_qte_success.dtl",
 "intro_qte_fail": "res://dialogue/intro_qte_fail.dtl",
 "intro_qte_success": "res://dialogue/intro_qte_success.dtl",
 "intro_thunder": "res://dialogue/intro_thunder.dtl"
@@ -78,7 +83,8 @@ audio/channel_defaults={
 }
 variables={
 "intro2_interacted": 0,
-"intro_interacted": 0
+"intro_interacted": 0,
+"livingroom_firsttime": true
 }
 glossary/default_case_sensitive=true
 

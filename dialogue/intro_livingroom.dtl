@@ -1,0 +1,18 @@
+label emergency_kit
+Sienna: This feels like it’s the emergency kit.
+Sienna opens the small bag and feels for the flashlight.
+join Item (Flashlight) center
+Sienna: Aha!
+Sienna: Let there be light!
+leave Item
+Sienna: Huh?
+join Ghost center
+Ghost: Sienna…
+Ghost: Lend me your body.
+Ghost: I want to live too.
+Sienna: Stop, you’re not real…
+Sienna: I’m just hallucinating!
+Sienna: This life is finally mine with you gone!
+Ghost: I deserve to be happy too.
+do QteManager.start_challenge()
+leave Ghost [animation="Instant Out"]

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://doi3pbvixxlwe"]
+
+[ext_resource type="Shader" uid="uid://c58obdbxy31qw" path="res://assets/art/shaders/vhs.gdshader" id="1_1uuog"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fwjam"]
+shader = ExtResource("1_1uuog")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 0.050000002375
+shader_parameter/warp_amount = 0.05
+shader_parameter/vignette_amount = 0.50000002375
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
+
+[node name="Shaders" type="CanvasLayer" unique_id=654473632]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1395916674]
+material = SubResource("ShaderMaterial_fwjam")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

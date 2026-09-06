@@ -1,0 +1,19 @@
+join Ghost center
+Ghost: Why…?
+Ghost: I’m only here because of you.
+leave Ghost
+Sienna: He’s only here because of me?
+Sienna: Why?
+Sienna: Why can’t I let go of him?
+Sienna: Was I so wrong to want a new start?
+Sienna: ...
+Sienna: I need to get rid of him for good.
+Sienna: I need to exorcise him.
+Sienna: Ma is pretty spiritual. She’ll know what to do.
+Sienna: If only I could find a way to contact her.
+Sienna: For now, I’ll look around.
+[style name="cutscene_style"]
+Move and search in different rooms for various objects of interest.
+Find clues on why the ghost haunts you.
+Figure out a way to exorcise him.
+set {livingroom_firsttime} = false

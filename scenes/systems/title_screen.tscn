@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://rfmejqli8gtn"]
+
+[ext_resource type="Texture2D" uid="uid://ck2mjo0nklixq" path="res://assets/art/title/title_screen.jpg" id="1_mexr6"]
+[ext_resource type="FontFile" uid="uid://bfgknm734fxjv" path="res://assets/GeistPixel-Regular-VariableFont_ELSH.ttf" id="3_6kjv5"]
+[ext_resource type="Script" uid="uid://do6kqrkuhbcpd" path="res://scenes/systems/title_screen.gd" id="3_8lcfl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8lcfl"]
+font = ExtResource("3_6kjv5")
+font_size = 150
+
+[sub_resource type="Theme" id="Theme_6kjv5"]
+default_font = ExtResource("3_6kjv5")
+default_font_size = 50
+
+[node name="TitleScreen" type="Control" unique_id=565143438]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_8lcfl")
+main_game_scene = "uid://2bpvktqap1j0"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1297978672]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mexr6")
+
+[node name="Label" type="Label" parent="." unique_id=130650635]
+layout_mode = 0
+offset_left = 1328.0
+offset_top = 93.0
+offset_right = 1744.0
+offset_bottom = 687.0
+text = "After
+the
+Storm"
+label_settings = SubResource("LabelSettings_8lcfl")
+
+[node name="StartButton" type="Button" parent="." unique_id=400395675]
+layout_mode = 0
+offset_left = 1345.0
+offset_top = 812.0
+offset_right = 1539.0
+offset_bottom = 886.0
+theme = SubResource("Theme_6kjv5")
+text = "[START]"
