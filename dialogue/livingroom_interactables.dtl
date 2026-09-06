@@ -1,0 +1,27 @@
+label Tenancy Contract
+Sienna: The tenancy contract between myself and my landlord.
+Sienna: The contract includes details about the complex, rules, and payment.
+Sienna: My parents wanted me to stay in an all women complex.
+Sienna: This one felt reassuring because it’s inclusive of queer people and it seems like a safe area.
+Sienna: The rent’s expensive but it seems pretty reasonable for a furnished unit for one person.
+Sienna: Air conditioning would be nice, but it’s the rainy season anyway.
+Sienna: I’ll live for now.
+Sienna: The only issue that the landlord has explicitly told us is that the bathroom door gets stuck.
+Sienna: You need to push the knob upwards every time to get it to open.
+Sienna: There should also be separate keys for all the rooms.
+Sienna: I recall putting it in my pocket but it’s not with me anymore.
+Sienna: Where did I put it?
+set {bathroom_unlocked} = true
+[end_timeline]
+label Checklist
+Sienna: Just my checklist that includes everything I need to bring from my hometown.
+Sienna: Part of why I was given a solo apartment was that I wanted to bring a lot of my personal things
+Sienna: And they would take up too much space in a normal student dorm.
+Ghost: But you still left many things behind.
+Sienna: ...
+Sienna: But I still left many things behind,
+Sienna: Things I no longer need.
+Sienna: My old clothes for one.
+Sienna: I just… grew out of them.
+Sienna: I need to thrift new clothes soon.
+[end_timeline]

@@ -17,3 +17,4 @@ Move and search in different rooms for various objects of interest.
 Find clues on why the ghost haunts you.
 Figure out a way to exorcise him.
 set {livingroom_firsttime} = false
+set {intro_done} = true

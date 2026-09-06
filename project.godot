@@ -27,11 +27,18 @@ Shaders="*uid://doi3pbvixxlwe"
 [dialogic]
 
 directories/dch_directory={
+"Ending": "res://characters/Ending.dch",
 "Ghost": "res://characters/Ghost.dch",
 "Item": "res://characters/Item.dch",
+"Julian": "res://characters/Julian.dch",
+"Ma": "res://characters/Ma.dch",
 "Sienna": "res://characters/Sienna.dch"
 }
 directories/dtl_directory={
+"bathroom_interactables": "res://dialogue/bathroom_interactables.dtl",
+"bedroom_interactables": "res://dialogue/bedroom_interactables.dtl",
+"closet_interactables": "res://dialogue/closet_interactables.dtl",
+"endings": "res://dialogue/endings.dtl",
 "intro": "res://dialogue/intro.dtl",
 "intro2_interactables": "res://dialogue/intro2_interactables.dtl",
 "intro_interactables": "res://dialogue/intro_interactables.dtl",
@@ -40,7 +47,9 @@ directories/dtl_directory={
 "intro_livingroom_qte_success": "res://dialogue/intro_livingroom_qte_success.dtl",
 "intro_qte_fail": "res://dialogue/intro_qte_fail.dtl",
 "intro_qte_success": "res://dialogue/intro_qte_success.dtl",
-"intro_thunder": "res://dialogue/intro_thunder.dtl"
+"intro_thunder": "res://dialogue/intro_thunder.dtl",
+"kitchen_interactables": "res://dialogue/kitchen_interactables.dtl",
+"livingroom_interactables": "res://dialogue/livingroom_interactables.dtl"
 }
 layout/style_directory={
 "": "res://addons/dialogic/style.tres",
@@ -82,9 +91,16 @@ audio/channel_defaults={
 }
 }
 variables={
+"bathroom_unlocked": false,
+"bedroom_unlocked": false,
+"closet_done": false,
+"closet_unlocked": false,
+"interactables_clicked": 16,
 "intro2_interacted": 0,
+"intro_done": false,
 "intro_interacted": 0,
-"livingroom_firsttime": true
+"livingroom_firsttime": true,
+"parents_messaged": false
 }
 glossary/default_case_sensitive=true
 

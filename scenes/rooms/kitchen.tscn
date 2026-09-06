@@ -2,17 +2,51 @@
 
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_3w07q"]
 [ext_resource type="Texture2D" uid="uid://6ifmhe1t371o" path="res://assets/art/backgrounds/kitchen.png" id="2_p7bu6"]
+[ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_sqdrw"]
 
 [node name="Kitchen" unique_id=1809451776 instance=ExtResource("1_3w07q")]
 
 [node name="Background" parent="." index="1" unique_id=1308147324]
 texture = ExtResource("2_p7bu6")
 
+[node name="OnEntry" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=1214272980 instance=ExtResource("3_sqdrw")]
+layout_mode = 0
+offset_right = 0.0
+offset_bottom = 0.0
+timeline_name = "kitchen_interactables"
+label_name = "On Entry"
+trigger_on_entry = true
+is_conditional = true
+required_variable_name = "intro_done"
+
+[node name="Lighter" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=1828305717 instance=ExtResource("3_sqdrw")]
+layout_mode = 0
+offset_left = 1003.0
+offset_top = 461.0
+offset_right = 1117.0
+offset_bottom = 518.0
+timeline_name = "kitchen_interactables"
+label_name = "Lighter Post Message"
+is_conditional = true
+required_variable_name = "parents_messaged"
+fallback_label_name = "Lighter Pre Message"
+
+[node name="University Documents" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="2" unique_id=321977666 instance=ExtResource("3_sqdrw")]
+layout_mode = 0
+offset_left = 1436.0
+offset_top = 544.0
+offset_right = 1701.0
+offset_bottom = 688.0
+timeline_name = "kitchen_interactables"
+label_name = "University Documents"
+
 [node name="NavButtonLeft" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="0" unique_id=934337939]
 target_room = "living_room"
 
 [node name="NavButtonRight" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="1" unique_id=1425211887]
 target_room = "Closet"
+is_conditional = true
+required_variable_name = "closet_unlocked"
 
 [node name="NavButtonDown" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="2" unique_id=844873878]
 target_room = "hallway"

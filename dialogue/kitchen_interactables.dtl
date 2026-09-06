@@ -1,0 +1,29 @@
+label On Entry
+Sienna: A kitchen space for myself.
+Sienna pulls out her phone.
+Sienna: Darn, still no signal here.
+Sienna: I should continue searching.
+[end_timeline]
+label Lighter Pre Message
+Sienna: A lighter.
+Sienna: It could be another source of light if my flashlight drains.
+Sienna: But that… could be a fire hazard.
+Sienna: I’ll leave it be for now.
+[end_timeline]
+label Lighter Post Message
+Sienna: Ma said I should destroy an item related to the ghost.
+join Item (Lighter) center
+Sienna: It’s a bit of a fire hazard but I could burn something the ghost is binded to.
+Sienna: I’ll take it with me.
+leave Item
+[end_timeline]
+label University Documents
+join Item (University Documents) center
+Sienna: I’ve put all the forms and documents for uni in this table just so it won’t get lost in the mess in the living room.
+Sienna: I still haven’t properly filled it out.
+Sienna: More like I’ve been procrastinating on doing it.
+Sienna: I need to do it soon.
+Ghost: There’s no running away from it.
+[end_timeline]
+[end_timeline]
+[end_timeline]

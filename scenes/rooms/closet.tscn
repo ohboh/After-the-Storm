@@ -2,11 +2,31 @@
 
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_je706"]
 [ext_resource type="Texture2D" uid="uid://ddmjac85670rm" path="res://assets/art/backgrounds/closet.png" id="2_aya0h"]
+[ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_aya0h"]
 
 [node name="Closet" unique_id=1809451776 instance=ExtResource("1_je706")]
 
 [node name="Background" parent="." index="1" unique_id=1308147324]
 texture = ExtResource("2_aya0h")
+
+[node name="OnEntry" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=1214272980 instance=ExtResource("3_aya0h")]
+layout_mode = 0
+offset_right = 0.0
+offset_bottom = 0.0
+timeline_name = "closet_interactables"
+label_name = "On Entry"
+trigger_on_entry = true
+is_conditional = true
+required_variable_name = "intro_done"
+
+[node name="EmergencyKit" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=529258730 instance=ExtResource("3_aya0h")]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 412.0
+offset_right = 665.0
+offset_bottom = 615.0
+timeline_name = "intro_livingroom"
+label_name = "emergency_kit"
 
 [node name="NavButtonDown" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="2" unique_id=844873878]
 target_room = "kitchen"

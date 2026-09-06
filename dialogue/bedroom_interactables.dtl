@@ -1,0 +1,18 @@
+label On Entry
+Sienna: My bedroom.
+Sienna: My new bed is calling for me but I feel too uneasy to even sit down.
+if {closet_done} == false:
+	Sienna: First, let’s check if there’s a signal.
+	Sienna pulls out her phone.
+	join Item (Phone) center
+	Sienna: Nothing.
+	Sienna: Boo.
+	leave Item
+[end_timeline]
+label Dresser
+Sienna: This dresser was bought from a nearby market.
+Sienna: I kept the cloth over it so the dust won’t settle until I’ve properly organized everything.
+Sienna: But now, it just looks ominous.
+Sienna: The thought of unveiling it and seeing something other than myself scares me.
+if {interactables_clicked} == 16.0:
+	jump endings/

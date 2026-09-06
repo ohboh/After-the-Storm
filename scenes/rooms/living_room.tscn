@@ -19,12 +19,30 @@ offset_right = 599.0
 offset_bottom = 993.0
 timeline_name = "intro_livingroom"
 label_name = "emergency_kit"
-is_conditional = true
-required_variable_name = "livingroom_firsttime"
+
+[node name="Checklist" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=1335002120 instance=ExtResource("3_j6grr")]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 655.0
+offset_right = 805.0
+offset_bottom = 724.0
+timeline_name = "livingroom_interactables"
+label_name = "Checklist"
+
+[node name="TenancyContract2" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="2" unique_id=714865780 instance=ExtResource("3_j6grr")]
+layout_mode = 0
+offset_left = 978.0
+offset_top = 624.0
+offset_right = 1310.0
+offset_bottom = 741.0
+timeline_name = "livingroom_interactables"
+label_name = "Tenancy Contract"
 
 [node name="NavButtonLeft" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="0" unique_id=934337939]
 offset_bottom = -540.0
 target_room = "bathroom"
+is_conditional = true
+required_variable_name = "bathroom_unlocked"
 
 [node name="NavButtonLeft2" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="1" unique_id=1911325329 instance=ExtResource("3_fbuym")]
 layout_mode = 1
@@ -34,6 +52,8 @@ offset_top = 540.0
 offset_right = 300.0
 grow_horizontal = 1
 target_room = "bedroom"
+is_conditional = true
+required_variable_name = "bedroom_unlocked"
 
 [node name="NavButtonRight" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="2" unique_id=1425211887]
 target_room = "kitchen"

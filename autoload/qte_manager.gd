@@ -185,19 +185,66 @@ func _end_challenge(success: bool) -> void:
 	for child in container.get_children():
 		child.queue_free()
 
-	if success:
-		print("QTE CHALLENGE WON!")
-		ghost_sprite.position = ghost_base_position
-		var exit_tween = create_tween()
-		exit_tween.tween_property(ghost_sprite, "modulate:a", 0.0, 0.2)
-		await exit_tween.finished
-	else:
-		print("QTE CHALLENGE FAILED!")
-		ghost_sprite.position = ghost_base_position
-		ghost_sprite.scale = Vector2(2.2, 2.2)
-		ghost_sprite.modulate.a = 1.0
-		background_dim.color = Color(0.8, 0.0, 0.0, 0.8)
-		await get_tree().create_timer(0.4).timeout
+	# Only play the ghost end animation if the ghost sprite was actually active/visible
+	if ghost_sprite.visible:
+		if success:
+			print("QTE CHALLENGE WON!")
+			ghost_sprite.position = ghost_base_position
+			var exit_tween = create_tween()
+			exit_tween.tween_property(ghost_sprite, "modulate:a", 0.0, 0.2)
+			await exit_tween.finished
+		else:
+			print("QTE CHALLENGE FAILED!")
+			ghost_sprite.position = ghost_base_position
+			ghost_sprite.scale = Vector2(2.2, 2.2)
+			ghost_sprite.modulate.a = 1.0
+			background_dim.color = Color(0.8, 0.0, 0.0, 0.8)
+			await get_tree().create_timer(0.4).timeout
+
+	# Restore visual elements for future standard QTE calls
+	ghost_sprite.show()
+	background_dim.show()
 
 	hide()
 	qte_challenge_completed.emit(success)
+
+## Starts the QTE challenge without showing the ghost sprite, background dim, or playing audio
+func start_challenge_invisible(difficulty = Difficulty.MEDIUM) -> void:
+	if is_active: return
+	
+	var selected_preset: Dictionary = {}
+
+	if difficulty is String:
+		match difficulty.to_lower():
+			"easy": selected_preset = PRESETS[Difficulty.EASY]
+			"medium": selected_preset = PRESETS[Difficulty.MEDIUM]
+			"panic": selected_preset = PRESETS[Difficulty.PANIC]
+			_: selected_preset = PRESETS[Difficulty.MEDIUM]
+	elif difficulty in PRESETS:
+		selected_preset = PRESETS[difficulty]
+	else:
+		selected_preset = PRESETS[Difficulty.MEDIUM]
+
+	targets_to_win = selected_preset["targets_to_win"]
+	max_misses = selected_preset["max_misses"]
+	spawn_interval = selected_preset["spawn_interval"]
+	target_lifespan = selected_preset["target_lifespan"]
+
+	is_active = true
+	hits_count = 0
+	misses_count = 0
+	targets_spawned_count = 0
+	
+	for child in container.get_children():
+		child.queue_free()
+
+	# Hide overlay visual elements
+	ghost_sprite.hide()
+	background_dim.hide()
+	
+	# Show CanvasLayer so QTE circles inside 'container' remain visible and clickable
+	show()
+
+	spawn_timer.wait_time = spawn_interval
+	spawn_timer.start()
+	_on_spawn_timer_timeout()

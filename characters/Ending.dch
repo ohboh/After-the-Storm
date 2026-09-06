@@ -10,43 +10,43 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Flashlight",
+&"default_portrait": "1",
 &"description": "",
-&"display_name": "Item",
+&"display_name": "Ending",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Flashlight": {
+"1": {
 "export_overrides": {
-"image": "\"res://assets/art/items/flashlight.png\""
+"image": "\"res://assets/art/cg/1.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Lighter": {
+"2": {
 "export_overrides": {
-"image": "\"res://assets/art/items/lighter.png\""
+"image": "\"res://assets/art/cg/2.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Phone": {
+"3": {
 "export_overrides": {
-"image": "\"res://assets/art/items/phone.png\""
+"image": "\"res://assets/art/cg/3.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"University Documents": {
+"4": {
 "export_overrides": {
-"image": "\"res://assets/art/items/university documents.png\""
+"image": "\"res://assets/art/cg/4.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

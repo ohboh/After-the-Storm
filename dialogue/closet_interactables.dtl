@@ -1,0 +1,75 @@
+label On Entry
+Sienna: A small closet.
+Sienna: It’s too far from the bedroom for me to put my clothes in.
+Sienna: I’ll probably put my cleaning supplies and other miscellaneous things here.
+Sienna: But first…
+Sienna pulls out her phone.
+join Item (Phone) center
+Sienna: There’s a signal!
+Sienna: There’s already a message from Ma.
+Ma: Is it raining there? The rain suddenly got stronger when we left.
+Ma: Stay safe. Chat me when you’re done organizing your things.
+Sienna: This was just a while ago, so it seems like they’re safe.
+Sienna: Still, I should ask.
+Sienna: It’s raining heavily here and there’s a black out in my apartment.
+Sienna: But I’m safe!
+Sienna: Are you?
+Ma: Yes, yes, we’re still driving home right now.
+Ma: We’re being careful, don’t you worry.
+Ma: Don’t use your phone too much. Save your battery until the power’s back.
+Ma: Message me once you’re all settled.
+Sienna: Ah but… the ghost…
+Sienna: How do I even tell her about it?
+Sienna: Ma, I feel a bit uneasy in this apartment.
+Ma: Is there something wrong?
+Ma: Are you safe?
+Sienna: Yes, but…
+Sienna: There’s a presence here.
+Sienna: It’s trying to talk and reach out to me.
+Sienna: ...
+Sienna: Ma?
+Ma: Do you want us to go back?
+Sienna: I do.
+Sienna: No, no, it’s unsafe.
+Sienna: Do you know how to get rid of it?
+Ma: If it appeared in the apartment, there’s a reason why.
+Ma: You only need to search to find out the reason.
+Ma: Specifically, search for an object that its presence is binded to.
+Ma: A photo would be best, but if there’s nothing else, find something that it has once used.
+Ma: Then destroy it.
+Ma: Better yet, burn it right in front of it.
+Sienna: Wouldn’t that make it mad!?
+Sienna: I can do it.
+Sienna: I’ll message you once I’m done.
+Ma: Sienna.
+Ma: Don’t be too hard on yourself.
+Sienna: Hm?
+Ma: I know you’re excited for a new start, but we’re always here to talk to you.
+Ma: Knowing that our only son is gone is a change we’re getting used to.
+Ma: But our only daughter is still here and we don’t want our love to change.
+Ma: I know we haven’t fully understood why you did what you did.
+Ma: It doesn’t matter to us. You’re still our child.
+Ma: Mahal ka namin, Sienna. Ingat ka palagi.
+Sienna: What do I even reply to that?
+Sienna: ...
+Just as Sienna was about to type out a reply, the phone dies.
+Sienna: Darn.
+Sienna: I really hope the power returns soon.
+Sienna: I want to thank Ma for those words.
+[end_timeline]
+label Photo Album
+Sienna: A photo album from home.
+Sienna: I didn’t pack this.
+Sienna: It looks like my parents did and hid it here.
+Sienna: They know I’ll try to return it to them.
+Sienna: I never wanted to look at it again.
+Sienna: Only the dead fill its pages.
+Sienna: But I’ll be able to get his photo.
+Sienna takes a photo of the ghost boy.
+Sienna: He was so full of life.
+Sienna: Looking back, our childhood wasn’t all that bad.
+Sienna: But it was you or me.
+Ghost: As if the choice could end with me alive.
+Sienna: Was it the wrong choice?
+set {closet_done} = true
+[end_timeline]
