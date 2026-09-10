@@ -14,5 +14,6 @@ Sienna: Stop, you’re not real…
 Sienna: I’m just hallucinating!
 Sienna: This life is finally mine with you gone!
 Ghost: I deserve to be happy too.
+set {bag_firsttime} = false
 do QteManager.start_challenge()
 leave Ghost [animation="Instant Out"]

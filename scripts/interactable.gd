@@ -12,11 +12,13 @@ extends TextureButton
 @export var trigger_on_entry: bool = false
 
 @export_group("Condition Settings")
-## If enabled, requires a specific Dialogic variable to be true before running the primary timeline.
+## If enabled, requires specific Dialogic variable(s) to be true before running the primary timeline.
 @export var is_conditional: bool = false
-## The name of the Dialogic variable that must be true (e.g., "has_crowbar" or "found_key")
+## Primary required Dialogic variable (e.g., "has_crowbar")
 @export var required_variable_name: String = ""
-## Optional label inside 'timeline_name' to jump to if condition fails (e.g., "locked_label")
+## Optional secondary Dialogic variable that must also be true (e.g., "power_is_on")
+@export var required_variable_2_name: String = ""
+## Optional label inside 'timeline_name' to jump to if any condition fails (e.g., "locked_label")
 @export var fallback_label_name: String = ""
 
 @export_group("Audio")
@@ -33,39 +35,54 @@ func _on_pressed() -> void:
 	if Dialogic.current_timeline != null:
 		return
 
-	# Check variable condition if enabled
-	if is_conditional and not _check_condition():
+	# Check variable conditions if enabled
+	if is_conditional and not _check_conditions():
 		# Jump to fallback label inside the same timeline if condition fails
 		if not timeline_name.is_empty() and not fallback_label_name.is_empty():
 			Dialogic.start(timeline_name, fallback_label_name)
 		return
 
 	if not timeline_name.is_empty():
-		Dialogic.start(timeline_name, label_name)
 		Dialogic.VAR.interactables_clicked += 1
+		print(Dialogic.VAR.interactables_clicked)
+		Dialogic.start(timeline_name, label_name)
 		
-	# Only disable if the condition passed and the primary timeline was started
+	# Only disable if the conditions passed and the primary timeline was started
 	if disable_on_press:
 		disabled = true
 		mouse_default_cursor_shape = Control.CURSOR_ARROW
 
-## Evaluates whether the required Dialogic variable is set to true
-func _check_condition() -> bool:
-	if required_variable_name.is_empty():
-		return true
-		
+## Evaluates whether all required Dialogic variables are set to true
+func _check_conditions() -> bool:
 	if not Dialogic.has_subsystem("VAR"):
 		return true
 
-	# Fetch the variable value directly from Dialogic's variable subsystem
-	var var_value: Variant = Dialogic.VAR.get_variable(required_variable_name)
-	
-	# Evaluate truthiness (handles boolean true or truthy values)
-	if var_value is bool:
+	# Check primary variable condition
+	if not required_variable_name.is_empty():
+		if not _eval_var(required_variable_name):
+			return false
+
+	# Check secondary optional variable condition
+	if not required_variable_2_name.is_empty():
+		if not _eval_var(required_variable_2_name):
+			return false
+
+	return true
+
+## Helper to evaluate the truthiness of a specific Dialogic variable
+func _eval_var(var_name: String) -> bool:
+	if not Dialogic.VAR.has(var_name):
+		return false
+
+	var var_value: Variant = Dialogic.VAR.get_variable(var_name)
+
+	if var_value == null:
+		return false
+	elif var_value is bool:
 		return var_value
 	elif var_value is String:
 		return var_value.to_lower() == "true" or var_value == "1"
 	elif var_value is float or var_value is int:
 		return var_value > 0
-		
+
 	return false

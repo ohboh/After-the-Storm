@@ -8,11 +8,12 @@ if {closet_done} == false:
 	Sienna: Nothing.
 	Sienna: Boo.
 	leave Item
+set {bedroom_firsttime} = false
 [end_timeline]
 label Dresser
 Sienna: This dresser was bought from a nearby market.
 Sienna: I kept the cloth over it so the dust won’t settle until I’ve properly organized everything.
 Sienna: But now, it just looks ominous.
 Sienna: The thought of unveiling it and seeing something other than myself scares me.
-if {interactables_clicked} == 16.0:
+if {interactables_clicked} >= 16.0:
 	jump endings/

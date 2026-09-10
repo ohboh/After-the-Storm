@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpne1q3mq6g3u"
-path="res://.godot/imported/Julian Sad 1.PNG-d66ca0c86585c484c9748b03f43bbf17.ctex"
+uid="uid://dmg02g76pqo7b"
+path="res://.godot/imported/Julian Sad 1.png-9774f713476be109ab0954e26f818ecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/portraits/Julian/Julian Sad 1.PNG"
-dest_files=["res://.godot/imported/Julian Sad 1.PNG-d66ca0c86585c484c9748b03f43bbf17.ctex"]
+source_file="res://assets/art/portraits/Julian/Julian Sad 1.png"
+dest_files=["res://.godot/imported/Julian Sad 1.png-9774f713476be109ab0954e26f818ecb.ctex"]
 
 [params]
 

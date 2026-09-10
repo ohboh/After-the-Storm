@@ -1,8 +1,12 @@
 label On Entry
 Sienna: A kitchen space for myself.
-Sienna pulls out her phone.
-Sienna: Darn, still no signal here.
-Sienna: I should continue searching.
+if {intro_done} == true:
+	Sienna pulls out her phone.
+	join Item (Phone) center
+	Sienna: Darn, still no signal here.
+	leave Item
+	Sienna: I should continue searching.
+set {kitchen_firsttime} = false
 [end_timeline]
 label Lighter Pre Message
 Sienna: A lighter.
@@ -24,6 +28,7 @@ Sienna: I still haven’t properly filled it out.
 Sienna: More like I’ve been procrastinating on doing it.
 Sienna: I need to do it soon.
 Ghost: There’s no running away from it.
+set {Interactables.university_documents} = false
 [end_timeline]
 [end_timeline]
 [end_timeline]

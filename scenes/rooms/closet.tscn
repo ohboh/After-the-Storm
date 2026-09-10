@@ -17,16 +17,17 @@ timeline_name = "closet_interactables"
 label_name = "On Entry"
 trigger_on_entry = true
 is_conditional = true
-required_variable_name = "intro_done"
+required_variable_name = "closet_firsttime"
 
-[node name="EmergencyKit" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=529258730 instance=ExtResource("3_aya0h")]
+[node name="Photo Album" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=529258730 instance=ExtResource("3_aya0h")]
 layout_mode = 0
 offset_left = 499.0
 offset_top = 412.0
 offset_right = 665.0
 offset_bottom = 615.0
-timeline_name = "intro_livingroom"
-label_name = "emergency_kit"
+timeline_name = "closet_interactables"
+label_name = "Photo Album"
+required_variable_name = "Interactables.photo_album"
 
 [node name="NavButtonDown" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="2" unique_id=844873878]
 target_room = "kitchen"

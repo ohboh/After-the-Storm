@@ -10,12 +10,49 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Cry 1",
 &"description": "",
 &"display_name": "Julian",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"Cry 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Julian/Julian Cry 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Cry 2": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Julian/Julian Cry 2.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad 1": {
+"export_overrides": {
+"image": "\"res://assets/art/portraits/Julian/Julian Sad 1.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"empty": {
+"export_overrides": {
+"image": ""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }

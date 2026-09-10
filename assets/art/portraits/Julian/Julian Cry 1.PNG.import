@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjx21hsdnyi7m"
-path="res://.godot/imported/Julian Cry 1.PNG-98e2758a1d1ab6a9631c2af0308667c0.ctex"
+uid="uid://jy8oxinidsp1"
+path="res://.godot/imported/Julian Cry 1.png-6418a4989ba62262df87d9d2f80d7a42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/art/portraits/Julian/Julian Cry 1.PNG"
-dest_files=["res://.godot/imported/Julian Cry 1.PNG-98e2758a1d1ab6a9631c2af0308667c0.ctex"]
+source_file="res://assets/art/portraits/Julian/Julian Cry 1.png"
+dest_files=["res://.godot/imported/Julian Cry 1.png-6418a4989ba62262df87d9d2f80d7a42.ctex"]
 
 [params]
 

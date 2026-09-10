@@ -2,11 +2,32 @@
 
 [ext_resource type="PackedScene" uid="uid://bkin60kfhvbhm" path="res://scenes/rooms/base_room.tscn" id="1_cwplf"]
 [ext_resource type="Texture2D" uid="uid://i8j87qkk7dah" path="res://assets/art/backgrounds/bedroom.png" id="2_whf2s"]
+[ext_resource type="PackedScene" uid="uid://brtfaouae2ogx" path="res://scenes/systems/interactable.tscn" id="3_whf2s"]
 
 [node name="Bedroom" unique_id=1809451776 instance=ExtResource("1_cwplf")]
 
 [node name="Background" parent="." index="1" unique_id=1308147324]
 texture = ExtResource("2_whf2s")
+
+[node name="Dresser" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="0" unique_id=1214272980 instance=ExtResource("3_whf2s")]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 345.0
+offset_right = 678.0
+offset_bottom = 709.0
+timeline_name = "bedroom_interactables"
+label_name = "Dresser"
+disable_on_press = false
+
+[node name="OnEntry" parent="Interactables" parent_id_path=PackedInt32Array(1122649769) index="1" unique_id=211549320 instance=ExtResource("3_whf2s")]
+layout_mode = 0
+offset_right = 0.0
+offset_bottom = 0.0
+timeline_name = "bedroom_interactables"
+label_name = "On Entry"
+trigger_on_entry = true
+is_conditional = true
+required_variable_name = "bedroom_firsttime"
 
 [node name="NavButtonRight" parent="NavButtons" parent_id_path=PackedInt32Array(466182865) index="1" unique_id=1425211887]
 target_room = "bathroom"

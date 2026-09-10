@@ -3,8 +3,11 @@ Sienna: The bathroom’s pretty small but it’s not like I’m gonna be hanging
 Sienna: It has what it needs.
 Sienna: I’ll have my luxurious bathtub when I’m rich.
 Sienna pulls out her phone.
+join Item (Phone) center
 Sienna: There’s no signal here.
+leave Item
 Sienna: Let’s continue searching then.
+set {bathroom_firsttime} = false
 [end_timeline]
 label Mirror
 Sienna: This mirror…
@@ -28,6 +31,5 @@ Sienna: The keys to all rooms in the apartment.
 Sienna: I’ll leave you on the floor for now.
 Ghost: I guess this is all I am to you.
 Ghost: Just some clothes to drop once you’ve had enough.
-set {closet_unlocked} = true
-set {bedroom_unlocked} = true
+set {rooms_unlocked} = true
 [end_timeline]

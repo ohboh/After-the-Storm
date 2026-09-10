@@ -56,6 +56,8 @@ Just as Sienna was about to type out a reply, the phone dies.
 Sienna: Darn.
 Sienna: I really hope the power returns soon.
 Sienna: I want to thank Ma for those words.
+set {closet_firsttime} = false
+set {parents_messaged} = true
 [end_timeline]
 label Photo Album
 Sienna: A photo album from home.
@@ -72,4 +74,5 @@ Sienna: But it was you or me.
 Ghost: As if the choice could end with me alive.
 Sienna: Was it the wrong choice?
 set {closet_done} = true
+set {Interactables.photo_album} = false
 [end_timeline]

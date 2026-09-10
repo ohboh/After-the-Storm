@@ -5,6 +5,7 @@ Ghost: Did you really hate seeing me that much?
 Ghost: Did you want to forget me entirely,
 Ghost: Even if it means rejecting all the memories of your childhood?
 Sienna unveils the cloth covering the dresser.
+leave Sienna
 [background arg="res://assets/art/cg/mirror.jpg" fade="0.5"]
 join Ghost (Ghost) center
 Ghost: Are you scared of me?
@@ -16,4 +17,78 @@ Sienna: I know you, Julian.
 Sienna: I know you’re just as lonely as I am.
 Sienna: I killed you, I know.
 Sienna: And I don’t blame you for resenting me because of it.
-Julian: I don’t.
+Julian (empty): I don’t.
+Julian: I only miss you, miss our memories.
+Julian: And I only envy you for turning into a person I also want to become.
+Julian: I… still wanted to live.
+Sienna: No matter how hard I try, I can’t get rid of you.
+Sienna: You’re always in my mind, in the mirror when I try to look at myself.
+Sienna: I can’t stomach any of our memories because I’m no longer the person I was back then.
+Sienna: It wasn’t my life.
+Sienna: But I’m nothing but an empty husk without my memories of you, too afraid for a new start.
+Sienna: I…
+Sienna: I’m unsure of what to do.
+- “You should’ve lived.”
+	Sienna: You should’ve lived.
+	Sienna: I never should’ve killed you.
+	Sienna: The guilt consumes me everyday.
+	Sienna: People have been moving on,
+	Sienna: But even now, some still think you’re me.
+	Sienna: Even me.
+	Sienna: I see your face in mine.
+	Sienna: And you still appear no matter how hard I try to change.
+	Sienna: I think it’s the world telling me they want you here.
+	Sienna: Possess me if you wish.
+	Sienna: I don’t want to live like this.
+	Julian: It’s weird. I should be happy.
+	Julian: You’re giving me your body.
+	Julian: I’ve always wanted to be you.
+	Julian: But if I become you,
+	Julian: You won’t be “you” anymore.
+	Sienna: It’s that or you disappear, right?
+	Sienna: It’s you or me.
+	Sienna: If you’re here, the world wants it to be you.
+	Sienna: That’s just what it takes for you to live again.
+	leave Ghost
+	join Julian (Sad 1) center
+	[wait_input]
+	update Julian (Cry 1) center
+	[wait_input]
+	update Julian (Cry 2) center
+	[wait_input]
+	Julian: I don’t want it to be me.
+- “I want to move on.”
+	Sienna: I…
+	Sienna: I want to move on.
+	Sienna: I can’t keep living like this,
+	Sienna: Pretending that my life before killing you didn’t matter.
+	Julian: You’re not giving me what I want?
+	Sienna: Is this really what you want?
+	Julian: I wanted to live.
+	Julian: I spent nights crying because I could hardly live my life as myself.
+	Julian: That’s why I was content to give up my life to you.
+	Julian: But I didn’t want to be forgotten, like I didn’t matter until now.
+	Sienna: ...
+	Sienna: You made me realize something.
+	Sienna: I am you, you are me.
+	Sienna: It was foolish of me to deny you because I didn’t want to be you.
+	Sienna: We’ve always been one and the same.
+	Sienna: You’re the only one who can understand what I’ve been through.
+	Sienna: I’m sick of rejecting the life we’ve lived so far.
+	Sienna: It has always been us.
+	Sienna: We’ve just changed.
+	Sienna: Even if you disappear, you won’t be gone.
+	Julian: I’ll live through you?
+	Sienna: I’ll make sure of it this time.
+	Julian: Then it’s time for us to move on.
+	Julian: Let’s live again, Sienna.
+	leave Ghost
+	join Ending (1) center
+	[wait_input]
+	update Ending (2) center
+	[wait_input]
+	update Ending (3) center
+	[wait_input]
+	update Ending (4) center
+	[wait_input]
+	[end_timeline]

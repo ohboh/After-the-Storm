@@ -12,6 +12,7 @@ Sienna: There should also be separate keys for all the rooms.
 Sienna: I recall putting it in my pocket but it’s not with me anymore.
 Sienna: Where did I put it?
 set {bathroom_unlocked} = true
+set {Interactables.tenancy_contract} = false
 [end_timeline]
 label Checklist
 Sienna: Just my checklist that includes everything I need to bring from my hometown.
@@ -24,4 +25,5 @@ Sienna: Things I no longer need.
 Sienna: My old clothes for one.
 Sienna: I just… grew out of them.
 Sienna: I need to thrift new clothes soon.
+set {Interactables.checklist} = false
 [end_timeline]

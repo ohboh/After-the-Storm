@@ -91,16 +91,28 @@ audio/channel_defaults={
 }
 }
 variables={
+"Interactables": {
+"bloody_clothes": true,
+"checklist": true,
+"photo_album": true,
+"tenancy_contract": true,
+"university_documents": true
+},
+"bag_firsttime": true,
+"bathroom_firsttime": true,
 "bathroom_unlocked": false,
-"bedroom_unlocked": false,
+"bedroom_firsttime": true,
 "closet_done": false,
+"closet_firsttime": true,
 "closet_unlocked": false,
-"interactables_clicked": 16,
+"interactables_clicked": 0,
 "intro2_interacted": 0,
 "intro_done": false,
 "intro_interacted": 0,
+"kitchen_firsttime": true,
 "livingroom_firsttime": true,
-"parents_messaged": false
+"parents_messaged": false,
+"rooms_unlocked": false
 }
 glossary/default_case_sensitive=true
 
